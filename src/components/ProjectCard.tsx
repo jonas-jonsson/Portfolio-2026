@@ -30,7 +30,6 @@ export const ProjectCard = ({
         <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
       </div>
 
-      {/* Tags Wrapper - mt-auto keeps this locked to the bottom of the card */}
       <div className="flex flex-wrap gap-2 mt-auto pt-2">
         {tags.map((tag) => (
           <span

@@ -6,8 +6,11 @@ import { NavLink } from "react-router";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const linkClass =
+    "flex items-center gap-1.5 hover:text-(--border) py-1 md:py-0";
+
   return (
-    <Card className="min-h-18 backdrop-blur-2xl flex flex-col md:flex-row px-5 p-3 md:items-center gap-4 justify-between transition-all duration-300">
+    <Card className="relative z-50 min-h-18 backdrop-blur-2xl flex flex-col md:flex-row px-5 p-3 md:items-center gap-4 justify-between transition-all duration-300 overflow-visible">
       <div className="flex w-full md:w-auto items-center justify-between">
         {/* Left Container */}
         <div className="flex h-12 items-center gap-3 px-3">
@@ -32,32 +35,45 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* 
-        Right Container (The Links List)
-        PC Mode: Stays an identical horizontal flex row (md:flex).
-        Mobile Mode: Swaps to a vertical column (flex-col) and toggles visibility via 'hidden' or 'flex' depending on state.
-      */}
-      <ul
-        className={`${isOpen ? "flex" : "hidden"} md:flex flex-col md:flex-row gap-5 pt-3 text-xl px-5 pb-3 md:pb-0`}
-      >
-        <NavLink
-          to="/"
-          onClick={() => setIsOpen(false)}
-          className="flex gap-1.5 hover:text-(--border) hover:cursor-pointer hover:transform-fill py-1 md:py-0"
-        >
+      {/* Desktop Links */}
+      <ul className="hidden md:flex flex-row items-center gap-5 text-xl px-0 py-0 bg-transparent border-none shadow-none rounded-none">
+        <NavLink to="/" onClick={() => setIsOpen(false)} className={linkClass}>
           <House /> Home
         </NavLink>
         <NavLink
-          to="Projects"
+          to="/projects"
           onClick={() => setIsOpen(false)}
-          className="flex gap-1.5 hover:text-(--border) py-1 md:py-0"
+          className={linkClass}
         >
           <FolderCode /> Projects
         </NavLink>
         <NavLink
-          to="Contact"
+          to="/contact"
           onClick={() => setIsOpen(false)}
-          className="flex gap-1.5 hover:text-(--border) py-1 md:py-0"
+          className={linkClass}
+        >
+          <Mail /> Contact
+        </NavLink>
+      </ul>
+
+      {/* Mobile Links */}
+      <ul
+        className={`${isOpen ? "flex" : "hidden"} md:hidden absolute left-3 right-3 top-full mt-3 flex-col items-start gap-5 text-xl px-5 py-4 rounded-xl bg-(--surface)/95 border border-(--border)/15 shadow-(--card-shadow) backdrop-blur-2xl`}
+      >
+        <NavLink to="/" onClick={() => setIsOpen(false)} className={linkClass}>
+          <House /> Home
+        </NavLink>
+        <NavLink
+          to="/projects"
+          onClick={() => setIsOpen(false)}
+          className={linkClass}
+        >
+          <FolderCode /> Projects
+        </NavLink>
+        <NavLink
+          to="/contact"
+          onClick={() => setIsOpen(false)}
+          className={linkClass}
         >
           <Mail /> Contact
         </NavLink>
