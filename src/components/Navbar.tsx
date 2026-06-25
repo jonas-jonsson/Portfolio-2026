@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const linkClass =
-    "flex items-center gap-1.5 hover:text-(--border) py-1 md:py-0";
+    "flex items-center gap-1.5 hover:text-(--border) py-1 md:px-5";
 
   return (
     <Card className="relative z-50 min-h-18 backdrop-blur-2xl flex flex-col md:flex-row px-5 p-3 md:items-center gap-4 justify-between transition-all duration-300 overflow-visible">
