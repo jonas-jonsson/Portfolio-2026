@@ -5,6 +5,7 @@
   --text-h: #08060d;
   --bg: #eff1f5;
   --surface: #e6e9ef;
+  --border: #787c99;
 
   /* Background gradient */
   --bg-grad-l: #a8ff78;
@@ -22,7 +23,6 @@
     --text-h: #f3f4f6;
     --bg: #1a1b26;
     --surface: #16161e;
-    --border: #787c99;
 
     /* Background gradient */
     --bg-grad-l: #0f2027;
