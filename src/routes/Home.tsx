@@ -1,4 +1,5 @@
 import { Card } from "@/components/Card";
+import laptopImage from "@/assets/images/laptop.jpg";
 
 export const Home = () => {
   return (
@@ -8,7 +9,7 @@ export const Home = () => {
         <Card className="flex-col gap-2 bg-(--surface)/40 rounded-xl p-6 shadow-(--card-shadow)">
           <span className="text-2xl md:text-3xl pl-1">Hi! I'm</span>
 
-          <h1 className="w-fit text-4xl sm:text-5xl md:text-7xl font-bold bg-linear-to-tr from-yellow-500 to-orange-500 text-transparent bg-clip-text leading-tight tracking-tight">
+          <h1 className="w-fit text-4xl sm:text-5xl md:text-7xl font-bold bg-linear-to-tr from-[color:var(--accent-title-from)] to-[color:var(--accent-title-to)] text-transparent bg-clip-text leading-tight tracking-tight">
             Jonas Jönsson
           </h1>
         </Card>

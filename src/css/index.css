@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #eff1f5;
-  --surface: #e6e9ef;
+  --text: #68616f;
+  --text-h: #2b2d36;
+  --bg: #f2f4f8;
+  --surface: #eaedf3;
   --border: #787c99;
+  --accent-title-from: #eab308;
+  --accent-title-to: #f97316;
+  --accent-gold: #d97706;
+  --accent-gold-soft: rgba(217, 119, 6, 0.1);
+  --accent-blue: #3b82f6;
+  --accent-blue-soft: rgba(59, 130, 246, 0.1);
+  --accent-orange: #f97316;
+  --accent-orange-soft: rgba(249, 115, 22, 0.1);
 
   /* Background gradient */
   --bg-grad-l: #a8ff78;
@@ -19,10 +27,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #1a1b26;
-    --surface: #16161e;
+    --text: #a3a8b3;
+    --text-h: #e5e7ee;
+    --bg: #1f212b;
+    --surface: #242733;
+    --accent-title-from: #fde047;
+    --accent-title-to: #fb923c;
+    --accent-gold: #facc15;
+    --accent-gold-soft: rgba(250, 204, 21, 0.12);
+    --accent-blue: #60a5fa;
+    --accent-blue-soft: rgba(96, 165, 250, 0.12);
+    --accent-orange: #fb923c;
+    --accent-orange-soft: rgba(251, 146, 60, 0.12);
 
     /* Background gradient */
     --bg-grad-l: #0f2027;

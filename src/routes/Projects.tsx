@@ -8,7 +8,7 @@ export const Projects = () => {
       <section className="flex flex-col gap-5 w-full">
         {/* Header Card */}
         <div className="flex flex-col gap-2 bg-(--surface)/40 rounded-xl p-6 shadow-(--card-shadow)">
-          <h1 className="flex w-fit text-5xl md:text-6xl font-bold bg-linear-to-tr from-yellow-500 to-orange-500 text-transparent bg-clip-text">
+          <h1 className="flex w-fit text-5xl md:text-6xl font-bold bg-linear-to-tr from-[color:var(--accent-title-from)] to-[color:var(--accent-title-to)] text-transparent bg-clip-text">
             My Projects
           </h1>
           <p className="text-xl max-w-xl text-balance opacity-90">

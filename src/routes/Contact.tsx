@@ -7,10 +7,10 @@ export const Contact = () => {
       <section className="relative flex flex-col gap-8 w-full">
         {/* Header Card */}
         <div className="flex flex-col gap-2 bg-(--surface)/40 rounded-xl p-6 shadow-(--card-shadow)">
-          <h1 className="flex w-fit text-5xl md:text-6xl font-bold bg-linear-to-tr from-yellow-500 to-orange-500 text-transparent bg-clip-text">
+          <h1 className="flex w-fit text-5xl md:text-6xl font-bold bg-linear-to-tr from-[color:var(--accent-title-from)] to-[color:var(--accent-title-to)] text-transparent bg-clip-text">
             Contact
           </h1>
-          <p className="text-xl max-w-xl text-balance opacity-90">
+          <p className="text-xl max-w-xl text-balance text-(--text)">
             Want to get in touch with me?
           </p>
         </div>
@@ -23,16 +23,15 @@ export const Contact = () => {
             rel="noopener noreferrer"
             className="group block no-underline transition-transform duration-200 hover:-translate-y-1"
           >
-            {/* Removed all static border and group-hover border utility classes */}
-            <Card className="flex-row items-center gap-4 bg-(--surface)/20 p-5 rounded-xl border-none h-full group-hover:bg-(--surface)/30 transition-all duration-200">
-              <div className="p-3 rounded-lg bg-yellow-500/10 text-yellow-500 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-200 shrink-0">
+            <Card className="flex-row items-center gap-4 p-5 rounded-xl h-full group-hover:shadow-md transition-all duration-200">
+              <div className="p-3 rounded-lg bg-[color:var(--accent-gold-soft)] text-[color:var(--accent-gold)] group-hover:bg-[color:var(--accent-gold)] group-hover:text-(--text-h) transition-colors duration-200 shrink-0">
                 <GitHubIcon className="w-6 h-6" />
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="text-sm text-gray-400 font-medium uppercase tracking-wider">
+                <span className="text-sm text-(--text) font-medium uppercase tracking-wider">
                   GitHub
                 </span>
-                <span className="text-base font-semibold text-white truncate">
+                <span className="text-base font-semibold text-(--text-h) truncate">
                   jonas-jonsson
                 </span>
               </div>
@@ -46,16 +45,15 @@ export const Contact = () => {
             rel="noopener noreferrer"
             className="group block no-underline transition-transform duration-200 hover:-translate-y-1"
           >
-            {/* Removed all static border and group-hover border utility classes */}
-            <Card className="flex-row items-center gap-4 bg-(--surface)/20 p-5 rounded-xl border-none h-full group-hover:bg-(--surface)/30 transition-all duration-200">
-              <div className="p-3 rounded-lg bg-blue-500/10 text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-200 shrink-0">
+            <Card className="flex-row items-center gap-4 p-5 rounded-xl h-full group-hover:shadow-md transition-all duration-200">
+              <div className="p-3 rounded-lg bg-[color:var(--accent-blue-soft)] text-[color:var(--accent-blue)] group-hover:bg-[color:var(--accent-blue)] group-hover:text-(--text-h) transition-colors duration-200 shrink-0">
                 <LinkedInIcon className="w-6 h-6" />
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="text-sm text-gray-400 font-medium uppercase tracking-wider">
+                <span className="text-sm text-(--text) font-medium uppercase tracking-wider">
                   LinkedIn
                 </span>
-                <span className="text-base font-semibold text-white truncate">
+                <span className="text-base font-semibold text-(--text-h) truncate">
                   Jonas Jönsson
                 </span>
               </div>
@@ -63,20 +61,19 @@ export const Contact = () => {
           </a>
           {/* Email Card */}
           <a
-            href="mailto:jonas@example.com"
+            href="mailto:jonas.jonsson@live.com"
             className="group block no-underline transition-transform duration-200 hover:-translate-y-1"
           >
-            {/* Removed all static border and group-hover border utility classes */}
-            <Card className="flex-row items-center gap-4 bg-(--surface)/20 p-5 rounded-xl border-none h-full group-hover:bg-(--surface)/30 transition-all duration-200">
-              <div className="p-3 rounded-lg bg-orange-500/10 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-200 shrink-0">
+            <Card className="flex-row items-center gap-4 p-5 rounded-xl h-full group-hover:shadow-md transition-all duration-200">
+              <div className="p-3 rounded-lg bg-[color:var(--accent-orange-soft)] text-[color:var(--accent-orange)] group-hover:bg-[color:var(--accent-orange)] group-hover:text-(--text-h) transition-colors duration-200 shrink-0">
                 <MailIcon className="w-6 h-6" />
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="text-sm text-gray-400 font-medium uppercase tracking-wider">
+                <span className="text-sm text-(--text) font-medium uppercase tracking-wider">
                   Email
                 </span>
-                <span className="text-base font-semibold text-white break-all">
-                  jonas@example.com
+                <span className="text-base font-semibold text-(--text-h) break-all">
+                  Jonas Jönsson
                 </span>
               </div>
             </Card>

@@ -1,10 +1,26 @@
 import { useState } from "react";
 import { FolderCode, House, Mail, Menu, X } from "lucide-react";
 import { Card } from "@/components/Card";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  const currentPageLabel =
+    pathname === "/"
+      ? "Home"
+      : pathname === "/projects"
+        ? "Projects"
+        : pathname === "/contact"
+          ? "Contact"
+          : (pathname
+              .split("/")
+              .filter(Boolean)
+              .at(-1)
+              ?.replace(/-/g, " ")
+              .replace(/\b\w/g, (character) => character.toUpperCase()) ??
+            "Home");
 
   const linkClass =
     "flex items-center gap-1.5 hover:text-(--border) py-1 md:px-5";
@@ -23,6 +39,9 @@ export const Navbar = () => {
           </div>
           <span className="text-3xl whitespace-nowrap">Jonas Jönsson</span>
           <span className="pt-1.5 text-(--text)/70">❯</span>
+          <span className="pt-1 text-(--text)/60 font-medium whitespace-nowrap text-xl">
+            {currentPageLabel}
+          </span>
         </div>
 
         {/* Mobile Burger Toggle Button (Hidden on PC) */}
