@@ -1,21 +1,17 @@
-// src/data/projects.ts
-
-export interface Project {
-  title: string;
-  description: string;
-  tags: string[];
-  previewText?: string;
-  previewBgClass?: string; // Tailwind color utility classes
-}
+import type { Project } from "@/types/Project";
+import lokkanImage from "@/assets/images/projects/Lokkan2.png";
 
 export const MY_PROJECTS: Project[] = [
   {
-    title: "Awesome Backend API",
+    title: "Lokkan",
     description:
-      "A robust, highly scalable REST API built using Go and PostgreSQL.",
-    tags: ["Go", "PostgreSQL", "Docker"],
+      "A local-first kanban. Your plan, your data. Built with Rust and React, powered by Tauri.",
+    tags: ["Rust", "Tauri", "SQLite", "React", "Vite", "Tailwind CSS"],
+    imageUrl: lokkanImage,
+    imageAlt: "Lokkan project screenshot",
     previewText: "Backend Service",
     previewBgClass: "bg-orange-500/10 text-orange-500",
+    gitHubLink: "https://github.com/jonas-jonsson/Lokkan",
   },
   {
     title: "Clean UI Dashboard",

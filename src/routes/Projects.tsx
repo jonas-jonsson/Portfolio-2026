@@ -24,8 +24,11 @@ export const Projects = () => {
               title={project.title}
               description={project.description}
               tags={project.tags}
+              imageUrl={project.imageUrl}
+              imageAlt={project.imageAlt}
               previewText={project.previewText}
               previewBgClass={project.previewBgClass}
+              gitHubLink={project.gitHubLink}
             />
           ))}
         </div>
