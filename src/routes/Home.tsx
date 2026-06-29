@@ -1,5 +1,4 @@
 import { Card } from "@/components/Card";
-import laptopImage from "@/assets/images/laptop.jpg";
 
 export const Home = () => {
   return (
