@@ -28,9 +28,9 @@ export const Navbar = () => {
 
   return (
     <Card className="relative z-50 min-h-18 backdrop-blur-2xl flex flex-col md:flex-row px-5 p-3 md:items-center gap-4 justify-between transition-all duration-300 overflow-visible">
-      <div className="flex w-full md:w-auto items-center justify-between">
+      <div className="flex w-full min-w-0 items-center justify-between gap-3 md:w-auto">
         {/* Left Container */}
-        <div className="flex h-12 items-center gap-3 px-3">
+        <div className="flex min-w-0 h-12 items-center gap-2 md:gap-3 px-2 md:px-3">
           <div className="flex border-2 border-(--border) rounded-full p-0.5 h-full aspect-square shrink-0">
             <img
               src={profileImg}
@@ -38,17 +38,23 @@ export const Navbar = () => {
               alt=""
             />
           </div>
-          <span className="text-3xl whitespace-nowrap">Jonas Jönsson</span>
-          <span className="pt-1.5 text-(--text)/70">❯</span>
-          <span className="pt-1 text-(--text)/60 font-medium whitespace-nowrap text-xl">
-            {currentPageLabel}
-          </span>
+          <div className="flex min-w-0 items-center gap-2">
+            <span className="min-w-0 truncate text-xl sm:text-2xl md:text-3xl whitespace-nowrap">
+              Jonas Jönsson
+            </span>
+            <span className="hidden sm:block pt-1.5 text-(--text)/70 shrink-0">
+              ❯
+            </span>
+            <span className="hidden sm:block pt-1 text-(--text)/60 font-medium whitespace-nowrap text-lg md:text-xl truncate">
+              {currentPageLabel}
+            </span>
+          </div>
         </div>
 
         {/* Mobile Burger Toggle Button (Hidden on PC) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex md:hidden p-2 text-(--text) hover:text-(--border) cursor-pointer"
+          className="flex md:hidden shrink-0 p-2 text-(--text) hover:text-(--border) cursor-pointer"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
