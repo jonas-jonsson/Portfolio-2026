@@ -22,6 +22,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* paths */
+    "ignoreDeprecations": "6.0", // For baseUrl deprecation warning.
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
