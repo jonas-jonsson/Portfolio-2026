@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FolderCode, House, Mail, Menu, X } from "lucide-react";
 import { Card } from "@/components/Card";
 import { NavLink, useLocation } from "react-router";
+import profileImg from "../assets/images/466378918_9048400881857306_466686750876003653_n-2.jpg";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ export const Navbar = () => {
         <div className="flex h-12 items-center gap-3 px-3">
           <div className="flex border-2 border-(--border) rounded-full p-0.5 h-full aspect-square shrink-0">
             <img
-              src="src/assets/images/466378918_9048400881857306_466686750876003653_n-2.jpg"
+              src={profileImg}
               className="rounded-full w-full h-full object-cover"
               alt=""
             />
