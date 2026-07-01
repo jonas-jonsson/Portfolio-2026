@@ -12,7 +12,7 @@ export const MY_PROJECTS: Project[] = [
     title: "Portfolio 2026",
     description: [
       "You're looking at it!",
-      "My current personal portfolio, built with built with Typescript, Vite React, React Router, Tailwind CSS, Three.js and vantajs.",
+      "My current personal portfolio, built with Typescript, Vite React, React Router, Tailwind CSS, Three.js and vantajs.",
     ],
     tags: [
       "Typescript",
